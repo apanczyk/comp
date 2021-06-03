@@ -10,7 +10,7 @@ public class Location  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer deviceId;
     private Integer latitiude;
     private Integer longitude;
 
@@ -22,12 +22,12 @@ public class Location  {
         this.longitude = longitude;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getDeviceId() {
+        return deviceId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
     }
 
     public Integer getLatitiude() {

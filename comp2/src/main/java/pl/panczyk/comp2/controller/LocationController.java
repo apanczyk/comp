@@ -31,7 +31,7 @@ public class LocationController {
 
     @PostMapping()
     public Location updateLocation(@RequestBody Location location) throws Exception {
-        Location currentLocation = locationRepository.findById(location.getId()).orElseThrow(Exception::new);
+        Location currentLocation = locationRepository.findById(location.getDeviceId()).orElseThrow(Exception::new);
         Location newLocation = locationService.changeLocation(currentLocation, location.getLatitiude(), location.getLongitude());
         return locationRepository.save(newLocation);
     }
